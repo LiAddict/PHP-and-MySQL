@@ -1,0 +1,60 @@
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.027 sec)
+
+MariaDB [(none)]> use test;
+Database changed
+MariaDB [test]> create table emp (fname varchar(30), lname varchar(30) );
+Query OK, 0 rows affected (0.563 sec)
+
+MariaDB [test]> insert into emp values("Frank","Smith");
+Query OK, 1 row affected (0.068 sec)
+
+MariaDB [test]> insert into emp values("Sara", "Jones");
+Query OK, 1 row affected (0.052 sec)
+
+MariaDB [test]> insert into emp values("Lucy","Williams");
+Query OK, 1 row affected (0.050 sec)
+
+MariaDB [test]> select * from emp;
++-------+----------+
+| fname | lname    |
++-------+----------+
+| Frank | Smith    |
+| Sara  | Jones    |
+| Lucy  | Williams |
++-------+----------+
+3 rows in set (0.001 sec)
+
+MariaDB [test]> update emp set lname= "Miller" where lname="Smith";
+Query OK, 1 row affected (0.137 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [test]> select * from emp;
++-------+----------+
+| fname | lname    |
++-------+----------+
+| Frank | Miller   |
+| Sara  | Jones    |
+| Lucy  | Williams |
++-------+----------+
+3 rows in set (0.001 sec)
+MariaDB [test]> delete from emp where fname="Lucy";
+Query OK, 1 row affected (0.042 sec)
+
+MariaDB [test]> select * from emp;
++-------+--------+
+| fname | lname  |
++-------+--------+
+| Frank | Miller |
+| Sara  | Jones  |
++-------+--------+
+2 rows in set (0.000 sec)
