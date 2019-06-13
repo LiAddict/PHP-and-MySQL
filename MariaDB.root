@@ -61,3 +61,6 @@ MariaDB [test]> select * from emp;
 | Sara  | Jones  |
 +-------+--------+
 2 rows in set (0.000 sec)
+
+MariaDB [test]> exit
+Bye
