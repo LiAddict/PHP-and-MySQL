@@ -38,6 +38,9 @@ MariaDB [test]> update emp set lname= "Miller" where lname="Smith";
 Query OK, 1 row affected (0.137 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
+MariaDB [test]> exit
+Bye
+
 MariaDB [test]> select * from emp;
 +-------+----------+
 | fname | lname    |
