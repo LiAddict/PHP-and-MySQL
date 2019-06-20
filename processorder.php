@@ -20,11 +20,30 @@
 			echo date('H:i, jS F Y');
 			echo "</p>";
 			
+			//Test variable status; if empty set quantity ordered to zero
+			if ((empty($_POST['tireqty']))){
+				$tireqty = 0;
+			}
+			if ((empty($_POST['oilqty']))){
+				$oilqty = 0;
+			}
+			if ((empty($_POST['tireqty']))){
+				$sparkqty = 0;
+			}
+			
 			//Create a variable to hold total quantity
 			//Add the quantities ordered
 			$totalqty = 0;
 			$totalqty = $tireqty + $oilqty + $sparkqty;
 			
+			//Test if anything was ordered
+			//Display message if nothing was ordered and exit
+			if ($totalqty == 0) {
+				echo '<p style="color:red">';
+				echo 'You did not order anything';
+				echo '</p>';
+			}
+			else {
 			//Display the order in the web browser
 			echo '<p>Your order is as follows: </p>';
 			echo htmlspecialchars($tireqty).' tires<br/>';
@@ -35,7 +54,6 @@
 			
 			//Create a variable to hold the total amount of the order
 			$totalamount = 0;
-			
 			//Define constant for prices of each item
 			define('TIREPRICE', 100);
 			define('OILPRICE', 10);
@@ -48,12 +66,36 @@
 							
 			echo "Subtotal: $".number_format($totalamount, 2)."<br />";
 			
+			//Calculating the discount
+			//Less than $25 = no discount
+			//$25 - $49 = 5% discount
+			//$50 - $99 = 10% discount
+			//$100 or more = 15% discount
+			if ($totalamount < 25) {
+				$discount = .00;
+			} elseif (($totalamount >=25) && ($totalamount <= 49)) {
+				$discount = .05;
+			} elseif (($totalamount >=50) && ($totalamount <= 99)) {
+				$discount = .10;
+			} elseif ($totalamount >=100) {
+				$discount = .15;
+			}
+			
+			//Change decimal percent into integer for display
+			$displaypercent = $discount * 100;
+			
+			//Calculate dollar value of discount; display discount total and total before tax
+			$discounttotal = $totalamount * $discount;
+			echo "Discount Received: $".number_format($discounttotal, 2)." calculated ".$displaypercent."%"."<br />";
+			$totalamount = $totalamount - $discounttotal;
+			echo "Total before tax: $".number_format($totalamount, 2)."<br />";
+			
 			//Determine tax for order and add to subtotal
 			//Display total amount for order
 			$taxrate = 0.10;
 			$totalamount = $totalamount * (1 + $taxrate);
 			echo "Total including tax: $".number_format($totalamount, 2)."</p>";
-			
+			}
 		?>
 	</body>
 </html>
