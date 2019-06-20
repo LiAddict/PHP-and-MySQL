@@ -20,11 +20,40 @@
 			echo date('H:i, jS F Y');
 			echo "</p>";
 			
+			//Create a variable to hold total quantity
+			//Add the quantities ordered
+			$totalqty = 0;
+			$totalqty = $tireqty + $oilqtpy + $sparkqty;
+			
 			//Display the order in the web browser
 			echo '<p>Your order is as follows: </p>';
 			echo htmlspecialchars($tireqty).' tires<br/>';
 			echo htmlspecialchars($oilqty).' bottles of oil<br />';
 			echo htmlspecialchars($sparkqty).' spark plugs<br />';
+			
+			echo "<p>Items Ordered: ".$totalqty."<br />";
+			
+			//Create a variable to hold the total amount of the order
+			$totalamount = 0;
+			
+			//Define constant for prices of each item
+			define('TIREPRICE', 100);
+			define('OILPRICE', 10);
+			define('SPARKPRICE', 4);
+			
+			//Determine total amount for order and display subtotal
+			$totalamount = $tireqty * TIREPRICE
+						+ $oilqty * OILPRICE
+						+ $sparkqty * SPARKPRICE;
+							
+			echo "Subtotal: $".number_format($totalamount, 2)."<br />";
+			
+			//Determine tax for order and add to subtotal
+			//Display total amount for order
+			$taxrate = 0.10;
+			$totalamount = $totalamount * (1 + $taxrate);
+			echo "Total including tax: $."number_format($totalamount, 2)."</p>";
+			
 		?>
 	</body>
 </html>
