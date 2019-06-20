@@ -16,13 +16,14 @@
 			$oilqty = $_POST['oilqty'];
 			$sparkqty = $_POST['sparkqty'];
 			
-			echo '<p>Order processed.</p>'; //Start processing the order
+			echo "<p>Order processed at "; //Start processing the order
 			echo date('H:i, jS F Y');
 			echo "</p>";
 			
 			//Display the order in the web browser
 			echo '<p>Your order is as follows: </p>';
 			echo htmlspecialchars($tireqty).' tires<br/>';
+			echo htmlspecialchars($oilqty).' bottles of oil<br />';
 			echo htmlspecialchars($sparkqty).' spark plugs<br />';
 		?>
 	</body>
