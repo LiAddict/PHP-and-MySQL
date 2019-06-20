@@ -23,7 +23,7 @@
 			//Create a variable to hold total quantity
 			//Add the quantities ordered
 			$totalqty = 0;
-			$totalqty = $tireqty + $oilqtpy + $sparkqty;
+			$totalqty = $tireqty + $oilqty + $sparkqty;
 			
 			//Display the order in the web browser
 			echo '<p>Your order is as follows: </p>';
@@ -52,7 +52,7 @@
 			//Display total amount for order
 			$taxrate = 0.10;
 			$totalamount = $totalamount * (1 + $taxrate);
-			echo "Total including tax: $."number_format($totalamount, 2)."</p>";
+			echo "Total including tax: $".number_format($totalamount, 2)."</p>";
 			
 		?>
 	</body>
