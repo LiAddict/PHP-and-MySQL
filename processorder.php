@@ -11,7 +11,19 @@
 				Last Modified: 6/19/2019
 				This script will process the customer order
 			*/
-			echo '<p>Order processed.</p>';
+			//Create short variable names for information received from order form
+			$tireqty = $_POST['tireqty'];
+			$oilqty = $_POST['oilqty'];
+			$sparkqty = $_POST['sparkqty'];
+			
+			echo '<p>Order processed.</p>'; //Start processing the order
+			echo date('H:i, jS F Y');
+			echo "</p>";
+			
+			//Display the order in the web browser
+			echo '<p>Your order is as follows: </p>';
+			echo htmlspecialchars($tireqty).' tires<br/>';
+			echo htmlspecialchars($sparkqty).' spark plugs<br />';
 		?>
 	</body>
 </html>
