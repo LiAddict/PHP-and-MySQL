@@ -11,6 +11,7 @@
 			</tr>
 			
 			<?php
+			//The for loop sets the initial value, test condition, and incremental value
 			for ($distance = 50; $distance <= 250; $distance +=50) {
 			echo "<tr>
 					<td style='text-align:right;'>".$distance."</td>
