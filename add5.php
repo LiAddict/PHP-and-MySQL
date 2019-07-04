@@ -1,4 +1,5 @@
 <?php
+	//pass by reference
 	function addFive(&$num) {
 		$num +=5;
 	}
