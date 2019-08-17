@@ -1,0 +1,105 @@
+﻿body {
+	text-align:center; 
+	background-color:#F0F0F0;
+	font-family: "arial"; 
+	font-size: 100%; 
+	margin: auto; 
+}
+h1 {
+	position:relative; 
+	top:50px; 
+	font-size:350%; 
+	color:white; 
+	margin:auto 0 auto 20px; 	
+	width: 700px; 
+}
+h2 { 
+	font-size:150%; 
+	margin-bottom:0; 
+	color:#003300;  
+	text-align:center; 
+}
+h3 { 
+	font-size:110%; 
+	color:#003300; 
+	text-align:center; 
+}
+#container {
+	position:relative; 
+	min-width:960px; 
+	max-width:1200px; 
+	margin:auto; 
+	text-align:left;	
+}
+#header { 
+	position:relative; 
+	margin:10px auto 0 auto; 
+	min-width:960px; 
+	max-width:1200px; 
+	height:300px; 
+	background-image: url('photos/header1x.jpg'); 
+	background-repeat:no-repeat; 
+	padding:0; 
+	color:white; 
+}
+ul { 
+	position:absolute; 
+	top: 388px; 
+	right:-265px; 
+	color:navy; 
+	width:135px; 
+	text-align:center; margin:0; 	
+	height: 22px; 
+}
+#nav ul { 
+	position:absolute; 
+	top:315px; 
+	left:-40px; 
+	color:navy; 
+	width:135px; 
+	text-align:center; margin:0; 
+}
+#midcol { 	
+	margin-left:150px; 
+	margin-right:150px; 
+}
+p.dark {font-size:120%; color:black; }
+#footer { 
+	text-align:center;
+	color: #357C99;
+	}
+.clear { clear:both; }
+/* set general side button styles */
+li { 
+	width:115px; 
+	list-style-type:none; 
+	margin-bottom:3px; 
+	text-align: center; 
+}
+/* set general anchor styles */
+li a { 
+	display:block; 
+	width:115px; 
+	color:white; 
+	font-weight:bold; 
+	text-decoration:none; 
+}
+/* specify state styles. */
+/* mouseout (default) */
+li a { 
+	background:#264D73; 
+	border:4px outset #357C99; 
+}
+/* mouseover */
+li a:hover { 
+	display:block; 
+	background:#666666;  
+	color:white; 
+	border:5px outset #CCCCCC; 
+	width:115px; 
+}
+/* onmousedown */
+li a:active { 
+	background:black;  
+	border:5px inset black; 
+} 
