@@ -1,3 +1,3 @@
 # PHP-and-MySQL
 Random PHP and HTML
-I hate php
+I hate php and html and xxamp should be banned.
