@@ -1,7 +1,7 @@
 <?php
 	//This creates a connection to the whalesdb database
 	//Set the access details as constants:
-	DEFINE ('DB_USER', 'kristaghazaleh');
+	DEFINE ('DB_USER', 'ellejen');
 	DEFINE ('DB_PASSWORD', 'Jaredworkdog0518');
 	DEFINE ('DB_HOST', 'localhost');
 	DEFINE ('DB_NAME', 'whales_db');
