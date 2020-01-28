@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ghazaleh's Auto Parts</title>
+	<title>L's Auto Parts</title>
 </head>
 <body>
 	<!-- page header -->
