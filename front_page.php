@@ -12,7 +12,7 @@
 <body>
 	<!-- page header -->
 	<header>
-		<h1><center>Ghazaleh's Auto Parts</center></h1>
+		<h1><center>L's Auto Parts</center></h1>
 	</header>
 	
 	<div align="center">
