@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ghazaleh's Auto Parts - Freight Costs</title>
+		<title>L's Auto Parts - Freight Costs</title>
 	</head>
 	<body>
 		<table style="border: 0px; padding; 3px">
