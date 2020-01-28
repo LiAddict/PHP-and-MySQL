@@ -30,7 +30,7 @@
 		</table>
 	</div>
 	<section>
-	<h2>Welcome to the home of Krista's Auto Parts.</h2>
+	<h2>Welcome to the home of Elle's Auto Parts.</h2>
 	<p>Please take some time to get to know us.</p>
 	<p>We specialize in serving your auto needs
 	and hope to hear from you soon.</p>
