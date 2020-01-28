@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Krista's Auto Parts</title>
+	<title>Elle's Auto Parts</title>
 	<link href="styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
