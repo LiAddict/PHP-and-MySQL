@@ -2,7 +2,7 @@
 	$integerx = 5;
 	$floatx = 4.0;
 	$stringx = 'Hello ';
-	$stringy = 'Krista Ghazaleh';
+	$stringy = 'Elle';
 	$boolx = True;
 	echo gettype($integerx);
 	echo '<br />';
